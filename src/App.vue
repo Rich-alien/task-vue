@@ -1,21 +1,25 @@
 <template>
-  <MainComponent/>
+  <div>
+    <MainComponent/>
+    <SliderComponent/>
+  </div>
 </template>
 <script>
 // import HeaderComponent from "./components/header/header.component"
 import MainComponent from "./pages/main/main.component"
+import SliderComponent from "./pages/slider/slider.component"
 
 export default {
   name: 'App',
   components: {
-    MainComponent
+    MainComponent,
+    SliderComponent
   }
 }
 </script>
 
 <style lang="scss">
 * {
-  color: white;
   margin: 0;
   padding: 0;
 }
@@ -23,7 +27,6 @@ export default {
 body {
   width: auto;
   background-color: black;
-
   color: white;
   font-size: 18px;
   line-height: 22px;

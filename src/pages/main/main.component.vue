@@ -11,14 +11,21 @@
           <ButtonComponent text="Обсудить проект"/>
         </div>
       </div>
-      <TelegramIcon class="main__icon"/>
+      <PlanetIcon class="main__icon"/>
     </div>
+    <button class="main__button">
+      Портфолио
+      <div >
+        <ArrowBlock class="main__button-arrow"/>
+      </div>
+    </button>
   </div>
 </template>
 <script>
 import HeaderComponent from "../../components/header/header.component"
 import ButtonComponent from "../../components/button/button.component"
-import TelegramIcon from "../../components/Logo/logo.planet.component"
+import PlanetIcon from "../../components/Logo/logo.planet.component"
+import ArrowBlock from "../../components/Logo/logo.arrow-block.component"
 
 export default {
   name: 'main',
@@ -28,13 +35,15 @@ export default {
   components: {
     HeaderComponent,
     ButtonComponent,
-    TelegramIcon
+    PlanetIcon,
+    ArrowBlock
   }
 }
 </script>
 
 <style scoped lang="sass">
 .main
+  position: relative
   width: 100%
   height: 100vh
   background-image: url("../../assets/bg.png")
@@ -65,7 +74,20 @@ export default {
       width: 513px
       font-size: 20px
       line-height: 150%
-
+  &__button
+    display: flex
+    border: none
+    color: white
+    background: none
+    position: absolute
+    top: 592px
+    right: 479px
+    &-arrow
+      margin-left: -8px
+      width: 37px
+      height: 20px
+      background: linear-gradient(91.72deg, #8F00FF 0%, #093FFF 103.3%)
+      filter: blur(4px)
   &__line
     width: 138px
     height: 2px
